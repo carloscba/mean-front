@@ -5,16 +5,21 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 //Modules
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './modules/material.module';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 //Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './containers/login/login.component';
-import { FormLoginComponent } from './components/form-login/form-login.component'
+import { FormLoginComponent } from './components/form-login/form-login.component';
+import { DashboardComponent } from './containers/dashboard/dashboard.component';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    FormLoginComponent
+    FormLoginComponent,
+    DashboardComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,8 @@ import { FormLoginComponent } from './components/form-login/form-login.component
     MaterialModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
