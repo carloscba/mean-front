@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-form-login',
@@ -8,6 +9,9 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class FormLoginComponent implements OnInit {
 
+  @Output() loginSuccess = new EventEmitter<object>();
+  @Output() loginError = new EventEmitter<object>();
+  
   formLogin
 
   constructor(private fb: FormBuilder) { }
@@ -20,6 +24,9 @@ export class FormLoginComponent implements OnInit {
   }
 
   submitHandler(){
+    this.loginSuccess.emit({
+      success : true
+    })
     console.log(this.formLogin.value)
   }  
 

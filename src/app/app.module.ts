@@ -6,12 +6,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './modules/material.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+//Services
+import { CountriesService } from './services/countries.service'
 //Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './containers/login/login.component';
 import { FormLoginComponent } from './components/form-login/form-login.component';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
-import { BarChartComponent } from './components/bar-chart/bar-chart.component'
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { FormCountryComponent } from './components/form-country/form-country.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component'
     LoginComponent,
     FormLoginComponent,
     DashboardComponent,
-    BarChartComponent
+    BarChartComponent,
+    FormCountryComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component'
     ReactiveFormsModule,
     NgxChartsModule
   ],
-  providers: [],
+  providers: [
+    CountriesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
