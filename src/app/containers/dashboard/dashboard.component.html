@@ -1,4 +1,11 @@
-<p>
-  <app-bar-chart [data] = "data"> </app-bar-chart>
-  <button (click) = "addItem()">Add</button>
-</p>
+<div class="menu">
+    <button mat-flat-button color="primary" (click) = "logout()">Logout</button>
+</div>
+<div class="container">
+  <div class="form">
+    <app-form-country [working] = "working" (validationSuccess) = "addItem($event)"></app-form-country>
+  </div>
+  <div class="chart">
+    <app-bar-chart [data]="data | async"> </app-bar-chart>
+  </div>
+</div>

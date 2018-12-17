@@ -1,5 +1,6 @@
 <div class="container">
-  <form novalidate [formGroup]="formLogin" (ngSubmit) = "submitHandler()">
+  <mat-progress-bar *ngIf="working" mode="indeterminate"></mat-progress-bar>
+  <form novalidate [formGroup]="form" (ngSubmit) = "submitHandler()">
     <mat-form-field class="field">
       <input matInput type="email" placeholder="Enter your email" formControlName="email">
     </mat-form-field>
@@ -8,6 +9,6 @@
       <input matInput type="password" placeholder="Enter your password" formControlName="password">
     </mat-form-field>  
 
-    <button class="btn-signin" mat-flat-button color="primary" [disabled]="formLogin.invalid">Signin</button>
+    <button class="btn-signin" mat-flat-button color="primary" [disabled]="form.invalid">Signin</button>
   </form>
 </div><!--<div class="container">-->

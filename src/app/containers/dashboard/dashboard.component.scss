@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) { 
+        flex-direction: row;
+    }
+}
+
+.form, .chart{
+    padding: 10px;
+}
+
+.form{
+    flex-grow: 1;
+
+    @media (min-width: 768px) { 
+        flex-grow: 1;
+    }    
+} 
+
+.chart{
+    flex-grow: 1;
+
+    @media (min-width: 768px) { 
+        flex-grow: 1;
+    }        
+}

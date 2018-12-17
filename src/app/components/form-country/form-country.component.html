@@ -1,3 +1,21 @@
-<p>
-  form-country works!
-</p>
+<div class="container">
+  <mat-progress-bar *ngIf="working" mode="indeterminate"></mat-progress-bar>
+  <form novalidate [formGroup]="form" (ngSubmit)="submitHandler()">
+    <fieldset [disabled]="working">
+      <mat-form-field class="field">
+        <mat-select placeholder="Country name"  formControlName="name">
+          <mat-option *ngFor="let country of countries" [value]="country">
+            {{country}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="field">
+        <input matInput type="number" placeholder="Population" formControlName="population">
+      </mat-form-field>
+
+      <button class="btn" mat-flat-button color="warn" (click) = "resetForm($event)">Delete</button>
+      <button class="btn" mat-flat-button color="primary" [disabled]="form.invalid">Save</button>
+    </fieldset>
+  </form>
+</div><!--<div class="container">-->

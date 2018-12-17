@@ -1,1 +1,2 @@
-<app-form-login></app-form-login>
+<app-form-login [working] = "working" (validationSuccess) = "login($event)"></app-form-login>
+{{ errorMessage }}
