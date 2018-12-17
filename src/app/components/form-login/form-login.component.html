@@ -1,14 +1,16 @@
 <div class="container">
   <mat-progress-bar *ngIf="working" mode="indeterminate"></mat-progress-bar>
   <form novalidate [formGroup]="form" (ngSubmit) = "submitHandler()">
-    <mat-form-field class="field">
-      <input matInput type="email" placeholder="Enter your email" formControlName="email">
-    </mat-form-field>
+    <fieldset [disabled] = "working">
+      <mat-form-field class="field">
+        <input matInput type="email" placeholder="Enter your email" formControlName="email">
+      </mat-form-field>
 
-    <mat-form-field class="field">
-      <input matInput type="password" placeholder="Enter your password" formControlName="password">
-    </mat-form-field>  
+      <mat-form-field class="field">
+        <input matInput type="password" placeholder="Enter your password" formControlName="password">
+      </mat-form-field>  
 
-    <button class="btn-signin" mat-flat-button color="primary" [disabled]="form.invalid">Signin</button>
+      <button class="btn-signin" mat-flat-button color="primary" [disabled]="form.invalid">Signin</button>
+    </fieldset>
   </form>
 </div><!--<div class="container">-->

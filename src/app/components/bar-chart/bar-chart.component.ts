@@ -10,12 +10,10 @@ export class BarChartComponent implements OnInit {
 
   @Input() data:any[];
 
-  view: any[] = [700, 400];
-
   showXAxis = true;
   showYAxis = true;
   gradient = false;
-  showLegend = true;
+  showLegend = false;
   showXAxisLabel = true;
   xAxisLabel = 'Country';
   showYAxisLabel = true;

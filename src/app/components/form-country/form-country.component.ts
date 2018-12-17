@@ -12,10 +12,19 @@ export class FormCountryComponent implements OnInit {
   @Output() validationSuccess: EventEmitter<object> = new EventEmitter<object>();
 
   public form
+
   public countries:any[] = [
-    "Germany",
-    "England",
-    "Italy"
+    "Afghanistan",
+    "Albania",
+    "Algeria",
+    "Andorra",
+    "Angola",
+    "Antigua and Barbuda",
+    "Argentina",
+    "Armenia",
+    "Australia",
+    "Austria",
+    "Azerbaijan"
   ]
 
   constructor(private fb: FormBuilder) { }
