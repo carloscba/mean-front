@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
 
 const modules = [
   MatFormFieldModule,
@@ -14,7 +15,8 @@ const modules = [
   MatCardModule,
   MatSelectModule,
   MatProgressBarModule,
-  MatIconModule
+  MatIconModule,
+  MatBadgeModule
 ];
 
 @NgModule({

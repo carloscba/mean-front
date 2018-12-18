@@ -8,7 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './modules/material.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 //Services
-import { CountriesService } from './services/countries.service'
+import { CountriesService } from './services/countries.service';
+import { LoginService } from './services/login.service';
+import { SocketService } from './services/socket.service';
 //Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './containers/login/login.component';
@@ -37,7 +39,9 @@ import { FormCountryComponent } from './components/form-country/form-country.com
     HttpClientModule
   ],
   providers: [
-    CountriesService
+    CountriesService,
+    LoginService,
+    SocketService
   ],
   bootstrap: [AppComponent]
 })

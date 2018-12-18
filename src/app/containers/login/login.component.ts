@@ -30,11 +30,9 @@ export class LoginComponent implements OnInit {
     this.toogleWorking();
     this.loginService.login(credentials).subscribe(
       (response:Credentials)=>{
-
         this.toogleWorking();
         this.loginService.setToken(response.id);
         this.router.navigate(['dashboard']);
-      
       },
       (error) => {
         this.toogleWorking();
